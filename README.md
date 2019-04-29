@@ -109,6 +109,6 @@ We will perform this analysis on both the wages data and the unemployment data. 
 
 ## Results
 
-<img src=“./plots/Atlantic-City-Leisure-Wages.png”/>
+![Atlantic City Leisure Wages Moving Average Model](plots/Atlantic-City-Leisure-Wages.png)
 
 ## Conclusions
