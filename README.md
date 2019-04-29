@@ -79,7 +79,7 @@ When collecting the economic data we collected wage and unemployment data but we
 
 #### Unemployment
 
-
+We collected data on unemployment rates in our localities of analyis from the St. Louis Federal Reserve Board's website. This data was available in downloadable csv files that included monthly unemployment rates.
 
 #### Weather
 
@@ -109,6 +109,6 @@ We will perform this analysis on both the wages data and the unemployment data. 
 
 ## Results
 
-
+![]("./plots/Atlantic-City-Leisure-Wages.png")
 
 ## Conclusions
