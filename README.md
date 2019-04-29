@@ -109,6 +109,6 @@ We will perform this analysis on both the wages data and the unemployment data. 
 
 ## Results
 
-![]("./plots/Atlantic-City-Leisure-Wages.png")
+<img src=“./plots/Atlantic-City-Leisure-Wages.png”/>
 
 ## Conclusions
