@@ -111,4 +111,12 @@ We will perform this analysis on both the wages data and the unemployment data. 
 
 ![Atlantic City Leisure Wages Moving Average Model](plots/Atlantic-City-Leisure-Wages.png)
 
+![Atlantic City Financial Serevices Wages Moving Average Model](plots/Atlantic-City-Financial-Services-Wages.png)
+
+![Atlantic City Leisure Wages Moving Average Model](plots/Atlantic-City-Professional-Business-Services-Wages.png)
+
+![Atlantic City Leisure Wages Moving Average Model](plots/Atlantic-City-Infomation-Services-Wages.png)
+
+![Atlantic City Leisure Wages Moving Average Model](plots/Atlantic-City-Unemployment.png)
+
 ## Conclusions
