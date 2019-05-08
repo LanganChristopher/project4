@@ -160,15 +160,29 @@ Additionally, if we had more time, we would have developed a methodology for mak
 ### Data Gathering
 
 - [Wages and Unemployment Data Gathering Notebook](./BLS-API_MK.ipynb)
+
+This is where we used BLS's API to pull in wage data.
 - [Precipitation and Wind Data Gathering Notebook](./NOAA_weather_data_compile-DB.ipynb)
+
+This is where we used brought in precipication and wind data.
 
 ### Data Cleaning
 - [Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
 
+This is where we cleaned the data into notebooks ready to model.
+
 ### Modeling
 - [Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
+
+This is where we modelled our wage data.
 - [Unemployment SARIMA Notebook](./unemployment_monthly-DB.ipynb)
+
+This is where we modelled our unemployment data.
 
 ### Plotting
 - [Barometric Pressure Plotting Notebook](./baro-pressure-hourly-final.ipynb)
+
+This is where we plotted our barometric pressure data.
 - [Precipitation Plotting Notebook](rain-wind-daily-readings.ipynb)
+
+This is where we plotted our precipitation data.
