@@ -154,3 +154,9 @@ Additionally, if we had more time, we would have developed a methodology for mak
 
 
 *A link to our presentation can be found here: https://prezi.com/view/4gXbgpUtN7HvtMc7oABo/*
+
+### Appendix
+
+## Github Project Directory
+
+[Wages and Unemployment Data Gathering Notebook]("./BLS-API_MK.ipynb")
