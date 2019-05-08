@@ -174,10 +174,10 @@ This is where we cleaned the data into notebooks ready to model.
 ### Modeling
 - [Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
 
-This is where we modelled our wage data.
+This is where we modeled our wage data.
 - [Unemployment SARIMA Notebook](./unemployment_monthly-DB.ipynb)
 
-This is where we modelled our unemployment data.
+This is where we modeled our unemployment data.
 
 ### Plotting
 - [Barometric Pressure Plotting Notebook](./baro-pressure-hourly-final.ipynb)
