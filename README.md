@@ -159,4 +159,4 @@ Additionally, if we had more time, we would have developed a methodology for mak
 
 ## Github Project Directory
 
-[Wages and Unemployment Data Gathering Notebook]("./BLS-API_MK.ipynb")
+[Wages and Unemployment Data Gathering Notebook](./BLS-API_MK.ipynb)
