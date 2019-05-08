@@ -155,8 +155,20 @@ Additionally, if we had more time, we would have developed a methodology for mak
 
 *A link to our presentation can be found here: https://prezi.com/view/4gXbgpUtN7HvtMc7oABo/*
 
-### Appendix
-
 ## Github Project Directory
 
+### Data Gathering
+
 [Wages and Unemployment Data Gathering Notebook](./BLS-API_MK.ipynb)
+[Precipitation and Wind Data Gathering Notebook](./NOAA_weather_data_compile-DB.ipynb)
+
+### Data Cleaning
+[Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
+
+### Modeling
+[Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
+[Unemployment SARIMA Notebook](./unemployment_monthly-DB.ipynb)
+
+### Plotting
+[Barometric Pressure Plotting Notebook](./baro-pressure-hourly-final.ipynb)
+[Precipitation Plotting Notebook](rain-wind-daily-readings.ipynb)
