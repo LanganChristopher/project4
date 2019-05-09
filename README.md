@@ -27,7 +27,7 @@ The following localities will be analyzed:
 - Portland, ME
 - Providence, RI
 
-We will analyze the wages and unemployment in these localitites. The wage data is broken down by industry, and we will investigate how wages in each of these industries may have been impacted by Sandy.
+We will analyze the wages and unemployment in these localities. The wage data is broken down by industry, and we will investigate how wages in each of these industries may have been impacted by Sandy.
 
 In order to compare the relative impact of the storm in each of the localities of analysis, we will also investigate weather data that is related to the intensity of the storm conditions. We will be interested to see to what extent the relative economic impact in each locality is reflected by the relative intensity of the storm in each locality.
 
@@ -35,13 +35,14 @@ In order to compare the relative impact of the storm in each of the localities o
 
 The following hypotheses will frame the focus of our analysis:
 
-1. The occurrence of a natural disaster will lead to a pronounced loss of wages and increase in unemployment.
+1. The occurrence of a natural disaster will negatively affect wages in the tourism industries.
 
-In general, we think that the occurrence of a distaster will have an economic impact on localities in the path of the disaster. The economic metrics that we are analyzing are wages and unemployment, so we think that we will see a drop in wages and an uptick in unemployment in the localities of analysis at the time immediately following Hurricane Sandy.
+In general, we think that the occurrence of a disaster will have an economic impact on localities in the path of the disaster. The economic metrics that we are analyzing are wages and unemployment, so we think that we will see a drop in wages and an uptick in unemployment in the localities of analysis at the time immediately following Hurricane Sandy.
 
-2. The occurrence of a natural disaster will negatively affect wages in tourism industries.
 
-We think that tourism industries will experience the largest impact from a disaster, because those industries are based on people visiting, and people spending money in these localities. During a disaster event like a hurricane, we would expect that, for a somewhat extended period of time surrounding the disaster, there would be a a major dip in any tourism-related spending, and that this may ultimately be reflected in wages.
+2. The occurrence of a natural disaster will not significantly affect wages in professional industries.
+
+We think that tourism industries will experience the largest impact from a disaster, because those industries are based on people visiting, and people spending money in these localities. During a disaster event like a hurricane, we would expect that, for a somewhat extended period of time surrounding the disaster, there would be a major dip in any tourism-related spending, and that this may ultimately be reflected in wages.
 
 3. The occurrence of a natural disaster will not significantly affect wages in professional industries. 
 
@@ -60,7 +61,7 @@ We think that any localized economic impact resulting from a disaster will be pr
 This is where we used BLS's API to pull in wage data.
 - [Precipitation and Wind Data Gathering Notebook](./NOAA_weather_data_compile-DB.ipynb)
 
-This is where we used brought in precipication and wind data.
+This is where we brought in precipication and wind data.
 
 ### Data Cleaning
 - [Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
@@ -107,11 +108,11 @@ The data for wages is broken down into the following categories:
 
 Wage data shortcomings:
 
-When collecting the economic data we collected wage and unemployment data but were only able to find monthly data for these two statistics which limited how much we were able to see the affects of natural distasters which often impact communities immediately. Additionally our wage datasets had many missing values which meant that some industries we could not affectively model and make conclusions about. When using BLS's API to get our wage data we were only able to bring in private industry data and were having difficulties bringing in government and non-profit industry data. This limited the amount of wage data we were able to gather on industries and it might be that government and non-profits are impacted differently from natural disasters compated to private industries. It is also worth noting that wages are not the best at measuring the economic impact of the sudden changes that natural disasters cause but are better measurements of how in demand different fields are. One possible alternative tht we could use in the future to measure the economic impact of sudden changes would be sales per day in a given locality.
+When collecting the economic data we collected wage and unemployment data but were only able to find monthly data for these two statistics which limited how much we were able to see the effects of natural disasters which often impact communities immediately. Additionally, our wage datasets had many missing values which meant that some industries we could not effectively model and make conclusions about. When using BLS's API to get our wage data we were only able to bring in private industry data and were having difficulties bringing in government and non-profit industry data. This limited the amount of wage data we were able to gather on industries and it might be that government and non-profits are impacted differently from natural disasters compared to private industries. It is also worth noting that wages are not the best at measuring the economic impact of the sudden changes that natural disasters cause but are better measurements of how in demand different fields are. One possible alternative that we could use in the future to measure the economic impact of sudden changes would be sales per day in a given locality.
 
 #### Unemployment
 
-We collected data on unemployment rates in our localities of analyis from the St. Louis Federal Reserve Board's website. This data was available in downloadable csv files that included monthly unemployment rates.
+We collected data on unemployment rates in our localities of analysis from the St. Louis Federal Reserve Board's website. This data was available in downloadable CSV files that included monthly unemployment rates.
 
 Unemployment data shortcomings:
 
@@ -119,7 +120,7 @@ The unemployment data
 
 #### Weather
 
-In order to obtain historical weather data related to storm conditions, we gathered data from National Oceanic and Atmospheric Administration (NOAA). 
+In order to obtain historical weather data related to storm conditions, we gathered data from the National Oceanic and Atmospheric Administration (NOAA).
 
 We collected data for the following weather metrics:
 
@@ -129,18 +130,18 @@ We collected data for the following weather metrics:
 - maximum sustained 5 second wind speed
 - tide levels
 
-We acquired precipitation and wind data through the use of NOAA's Climate Data Online Search (https://www.ncdc.noaa.gov/cdo-web/search). Historical data on barometric pressure and tide levels was readily available in downloadable csv files. Ultimately, we did not use the tide level data as a metric to measure storm intensity.
+We acquired precipitation and wind data through the use of NOAA's Climate Data Online Search (https://www.ncdc.noaa.gov/cdo-web/search). Historical data on barometric pressure and tide levels was readily available in downloadable CSV files. Ultimately, we did not use the tide level data as a metric to measure storm intensity.
 
 
 Weather data shortcomings:
 
-When I collected tide levels for each of the localities there were were not consistent patterns on how many readings were taken per day so some days would have more readings than other days. Even though there were not consistent readings per day tide readings were conistent in that they had readings every single day. When I collected barometric pressure statistics there were instances where there would be multiple months worth of data missing, which according to a employee at NOAA was most likely due to problems with the machines taking the readings.
+When I collected tide levels for each of the localities there were not consistent patterns on how many readings were taken per day so some days would have more readings than other days. Even though there were not consistent readings per day tide readings were consistent in that they had readings every single day. When I collected barometric pressure statistics there were instances where there would be multiple months worth of data missing, which according to an employee at NOAA was most likely due to problems with the machines taking the readings.
 
 ## Methodology
 
 Because natural disasters occur suddenly, we are trying to assess the sudden fluctuations in the economic data that may have occurred in the months following Hurricane Sandy, which occurred in October 2012. That means that, in the context of ARIMA modeling, we are interested in extracting the moving average component of this data (which handles sudden fluctuations), and ignoring the auto-regressive component of this data (which handles long-term trends). Because we have obvious seasonality in this data, we will take one order of seasonal differencing (12 months) before fitting the models.
 
-We will perform this analysis on both the wages data and the unemployment data. We will perform a qualitative analysis of these time series in order to investigate if there is any noticeable change in wages or unemployment due to Hurricane Sandy. 
+We will perform this analysis on both the wage data and the unemployment data. We will perform a qualitative analysis of these time series in order to investigate if there is any noticeable change in wages or unemployment due to Hurricane Sandy.
 
 
 ## Results
@@ -172,7 +173,7 @@ We saw no evidence that wages in tourism industries are affected by the occurren
 
 3. The occurrence of a natural disaster will not significantly affect wages in professional industries. 
 
-The results were in line with the hypothesis that wages in professional industries are not impacted by the occurrence of a natural disaster, although that is a relatively trivial conclusion, since wages generally seemed to not be impactd by the occurrence of a disaster.
+The results were in line with the hypothesis that wages in professional industries are not impacted by the occurrence of a natural disaster, although that is a relatively trivial conclusion since wages generally seemed to not be impacted by the occurrence of a disaster.
 
 4. The relative intensity of a disaster in a given locality will be correlated to any negative impact on wages and unemployment.
 
@@ -180,9 +181,9 @@ We saw inconclusive evidence to support this. Out of the localities that we anal
 
 ## Recommendations
 
-Moving forward, we would be interested in analyzing other economic metrics that may be more impacted by the occurrence of a natural disaster. We would probably not study wage data again for this problem. We probably would look further into the potential impact on unemployment from natural disasters by looking at other instances of disasters and expanding the duration of the timee series data. Some other metrics that we would be curious to look into would be daily sales data and insurance claims, because we feel that these might be more responsive to sudden shocks to the system as compared to wages. In any case, we would recommend acquiring significantly more data than we did in order to improve the time series modeling. Since we were modeling with a seasonal difference of one year, and since we only collected six years of data, we only considered 5 years of data, which is not enough to build a quality time series model. 
+Moving forward, we would be interested in analyzing other economic metrics that may be more impacted by the occurrence of a natural disaster. We would probably not study wage data again for this problem. We probably would look further into the potential impact on unemployment from natural disasters by looking at other instances of disasters and expanding the duration of the time series data. Some other metrics that we would be curious to look into would be daily sales data and insurance claims because we feel that they might be more responsive to sudden shocks to the system as compared to wages. In any case, we would recommend acquiring significantly more data than we did in order to improve the time series modeling. Since we were modeling with a seasonal difference of one year, and since we only collected six years of data, we only considered 5 years of data, which is not enough to build a quality time series model.
 
-Additionally, if we had more time, we would have developed a methodology for making a quantitative estimate of the impact of a disaster. As it was, our data did not show enough of an out-of-the-norm-response to the occurrence of a disaster to conclude that there was any impact due to the disaster. At the same time, the ultimate goal of this project was to be able to estimate the economic impact of a disaster, so we eventually want to be able to make a quantitative measurement of the impact. In order to facillitate this, we need to collect more data, explore more economic metrics, and analyze more disasters.
+Additionally, if we had more time, we would have developed a methodology for making a quantitative estimate of the impact of a disaster. As it was, our data did not show enough of an out-of-the-norm-response to the occurrence of a disaster to conclude that there was any impact due to the disaster. At the same time, the ultimate goal of this project was to be able to estimate the economic impact of a disaster, so we eventually want to be able to make a quantitative measurement of the impact. In order to facilitate this, we need to collect more data, explore more economic metrics, and analyze more disasters.
 
 
 *A link to our presentation can be found here: https://prezi.com/view/4gXbgpUtN7HvtMc7oABo/*
