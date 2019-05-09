@@ -4,6 +4,54 @@
 
 ### April 29, 2019
 
+## Problem Statement
+
+How can we measure the economic impact of a disaster in terms of wages and unemployment?
+
+## Plan
+
+In order to approach this problem, we took a look at an isolated natural disaster and investigated the economic impact that the disaster had on different localities. In this project, we used Hurricane Sandy as a case study.
+
+We first selected some relevant localities for analysis. Since we were investigating Hurricane Sandy, we selected Mid-Atlantic and Northeast coastal cities in the United States. This part of the United States was most directly in the path of the storm.
+
+The following localities were analyzed:
+
+- Atlantic City, NJ
+- Baltimore, MD
+- Boston, MA
+- Bridgeport, CT
+- New Haven, CT
+- New London, CT
+- Newport, RI
+- Ocean City, MD
+- Portland, ME
+- Providence, RI
+
+We analyzed the wages and unemployment in these localities. The wage data was broken down by industry, and we investigated how wages in each of these industries were impacted by Sandy.
+
+In order to compare the relative impact of the storm in each of the localities of analysis, we also investigated weather data to show the intensity of the storm conditions. We were interested to see to what extent the relative economic impact in each locality was reflected by the relative intensity of the storm in each locality.
+
+## Hypotheses
+
+The following hypotheses framed the focus of our analysis:
+
+1. The occurrence of a natural disaster will negatively affect wages in the tourism industries.
+
+In general, we thought that the occurrence of a disaster would have an economic impact on localities in the path of the disaster. The economic metrics that we analyzed were wages and unemployment, so we thought that we would see a drop in wages and an uptick in unemployment in the localities of analysis at the time immediately following Hurricane Sandy.
+
+
+2. The occurrence of a natural disaster will not significantly affect wages in professional industries.
+
+We thought that tourism industries would experience the largest impact from a disaster, because those industries are based on people visiting, and people spending money. During a disaster event like a hurricane, we would expect that, for a somewhat extended period of time surrounding the disaster, there would be a major dip in any tourism-related spending, and that this may ultimately be reflected in wages.
+
+3. The occurrence of a natural disaster will not significantly affect wages in professional industries. 
+
+Conversely, we did not think that wages in professional industries would be impacted significantly by the occurrence of a disaster. While these industries may lose some productivity related to having to close offices for a brief time, we felt that this would not be nearly enough to result in a significant drop in wages.
+
+4. The relative intensity of a disaster in a given locality will be correlated to any negative impact on wages and unemployment.
+
+We thought that any localized economic impact resulting from a disaster would be proportional to the relative intensity of the disaster in that locality.
+
 ## Github Project Directory
 
 ### Data Gathering
@@ -18,7 +66,7 @@ This is where we brought in precipication and wind data.
 ### Data Cleaning
 - [Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
 
-This is where we cleaned the data into notebooks ready to model.
+This is where we cleaned the data into dataframes ready to model.
 
 ### Modeling
 - [Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
@@ -35,54 +83,6 @@ This is where we plotted our barometric pressure data.
 - [Precipitation Plotting Notebook](rain-wind-daily-readings.ipynb)
 
 This is where we plotted our precipitation data.
-
-## Problem Statement
-
-How can we measure the economic impact of a disaster in terms of wages and unemployment?
-
-## Plan
-
-In order to approach this problem, we will look at an isolated natural disaster and investigate the economic impact that may have resulted in localities that were affected by the disaster. In this project, we will use Hurricane Sandy as a case study.
-
-We will first select some relevant localities for analysis. Since we are investigating Hurricane Sandy, we will select Mid-Atlantic and Northeast coastal cities in the United States. This part of the United States was the most directly in the path of the storm.
-
-The following localities will be analyzed:
-
-- Atlantic City, NJ
-- Baltimore, MD
-- Boston, MA
-- Bridgeport, CT
-- New Haven, CT
-- New London, CT
-- Newport, RI
-- Ocean City, MD
-- Portland, ME
-- Providence, RI
-
-We will analyze the wages and unemployment in these localities. The wage data is broken down by industry, and we will investigate how wages in each of these industries may have been impacted by Sandy.
-
-In order to compare the relative impact of the storm in each of the localities of analysis, we will also investigate weather data that is related to the intensity of the storm conditions. We will be interested to see to what extent the relative economic impact in each locality is reflected by the relative intensity of the storm in each locality.
-
-## Hypotheses
-
-The following hypotheses will frame the focus of our analysis:
-
-1. The occurrence of a natural disaster will negatively affect wages in the tourism industries.
-
-In general, we think that the occurrence of a disaster will have an economic impact on localities in the path of the disaster. The economic metrics that we are analyzing are wages and unemployment, so we think that we will see a drop in wages and an uptick in unemployment in the localities of analysis at the time immediately following Hurricane Sandy.
-
-
-2. The occurrence of a natural disaster will not significantly affect wages in professional industries.
-
-We think that tourism industries will experience the largest impact from a disaster, because those industries are based on people visiting, and people spending money in these localities. During a disaster event like a hurricane, we would expect that, for a somewhat extended period of time surrounding the disaster, there would be a major dip in any tourism-related spending, and that this may ultimately be reflected in wages.
-
-3. The occurrence of a natural disaster will not significantly affect wages in professional industries. 
-
-Conversely, we do not think that wages in professional industries will be impacted significantly by the occurrence of a disaster. While these industries may lose some productivity related to having to close offices for a brief time, we feel that this will not be nearly enough to result in a significant drop in wages.
-
-4. The relative intensity of a disaster in a given locality will be correlated to any negative impact on wages and unemployment.
-
-We think that any localized economic impact resulting from a disaster will be proportional to the relative intensity of the disaster in that locality.
 
 ## Data
 
@@ -114,10 +114,6 @@ When collecting the economic data we collected wage and unemployment data but we
 
 We collected data on unemployment rates in our localities of analysis from the St. Louis Federal Reserve Board's website. This data was available in downloadable CSV files that included monthly unemployment rates.
 
-Unemployment data shortcomings:
-
-The unemployment data
-
 #### Weather
 
 In order to obtain historical weather data related to storm conditions, we gathered data from the National Oceanic and Atmospheric Administration (NOAA).
@@ -135,7 +131,7 @@ We acquired precipitation and wind data through the use of NOAA's Climate Data O
 
 Weather data shortcomings:
 
-When I collected tide levels for each of the localities there were not consistent patterns on how many readings were taken per day so some days would have more readings than other days. Even though there were not consistent readings per day tide readings were consistent in that they had readings every single day. When I collected barometric pressure statistics there were instances where there would be multiple months worth of data missing, which according to an employee at NOAA was most likely due to problems with the machines taking the readings.
+When I collected tide levels for each of the localities there were not consistent patterns on how many readings were taken per day so some days would have more readings than other days. Even though there were not consistent readings per day, tide readings were consistent in that they had readings every single day. When I collected barometric pressure statistics there were instances where there would be multiple months worth of data missing, which according to an employee at NOAA was most likely due to problems with the machines taking the readings.
 
 ## Methodology
 
@@ -187,3 +183,4 @@ Additionally, if we had more time, we would have developed a methodology for mak
 
 
 *A link to our presentation can be found here: https://prezi.com/view/4gXbgpUtN7HvtMc7oABo/*
+
