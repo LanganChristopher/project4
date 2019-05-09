@@ -52,38 +52,6 @@ Conversely, we do not think that wages in professional industries will be impact
 
 We think that any localized economic impact resulting from a disaster will be proportional to the relative intensity of the disaster in that locality.
 
-## Github Project Directory
-
-### Data Gathering
-
-- [Wages and Unemployment Data Gathering Notebook](./BLS-API_MK.ipynb)
-
-This is where we used BLS's API to pull in wage data.
-- [Precipitation and Wind Data Gathering Notebook](./NOAA_weather_data_compile-DB.ipynb)
-
-This is where we brought in precipication and wind data.
-
-### Data Cleaning
-- [Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
-
-This is where we cleaned the data into notebooks ready to model.
-
-### Modeling
-- [Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
-
-This is where we modeled our wage data.
-- [Unemployment SARIMA Notebook](./unemployment_monthly-DB.ipynb)
-
-This is where we modeled our unemployment data.
-
-### Plotting
-- [Barometric Pressure Plotting Notebook](./baro-pressure-hourly-final.ipynb)
-
-This is where we plotted our barometric pressure data.
-- [Precipitation Plotting Notebook](rain-wind-daily-readings.ipynb)
-
-This is where we plotted our precipitation data.
-
 ## Data
 
 #### Wages
@@ -188,3 +156,34 @@ Additionally, if we had more time, we would have developed a methodology for mak
 
 *A link to our presentation can be found here: https://prezi.com/view/4gXbgpUtN7HvtMc7oABo/*
 
+## Github Project Directory
+
+### Data Gathering
+
+- [Wages and Unemployment Data Gathering Notebook](./BLS-API_MK.ipynb)
+
+This is where we used BLS's API to pull in wage data.
+- [Precipitation and Wind Data Gathering Notebook](./NOAA_weather_data_compile-DB.ipynb)
+
+This is where we brought in precipication and wind data.
+
+### Data Cleaning
+- [Data Cleaning Notebook](./cleaning_notebook_nm.ipynb)
+
+This is where we cleaned the data into notebooks ready to model.
+
+### Modeling
+- [Wage SARIMA Notebook](./wage_analysis_sarima-DB.ipynb)
+
+This is where we modeled our wage data.
+- [Unemployment SARIMA Notebook](./unemployment_monthly-DB.ipynb)
+
+This is where we modeled our unemployment data.
+
+### Plotting
+- [Barometric Pressure Plotting Notebook](./baro-pressure-hourly-final.ipynb)
+
+This is where we plotted our barometric pressure data.
+- [Precipitation Plotting Notebook](rain-wind-daily-readings.ipynb)
+
+This is where we plotted our precipitation data.
